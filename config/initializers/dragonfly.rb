@@ -8,9 +8,12 @@ Dragonfly.app.configure do
 
   url_format "/media/:job/:name"
 
-  datastore :file,
-    root_path: Rails.root.join('public/system/dragonfly', Rails.env),
-    server_root: Rails.root.join('public')
+  datastore :s3,
+            bucket_name: ENV["BUCKET_NAME"],
+            access_key_id: ENV["AWS_KEY_ID"],
+            secret_access_key: ENV["SECRET_KEY"],
+            region: "ap-southeast-1",
+            url_scheme: 'https'
 end
 
 

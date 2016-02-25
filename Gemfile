@@ -12,7 +12,7 @@ gem "sdoc", "~> 0.4.0", group: :doc
 gem "bootstrap-sass"
 gem "dragonfly"
 gem "dragonfly-s3_data_store"
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'fog', '>= 1.15.0'
 
 group :development, :test do
   gem "pry-byebug"

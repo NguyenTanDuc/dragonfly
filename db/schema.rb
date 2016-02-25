@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160224155015) do
+ActiveRecord::Schema.define(version: 20160225115122) do
 
   create_table "photos", force: :cascade do |t|
     t.string   "title",      limit: 255
     t.string   "image_uid",  limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.integer  "image_size", limit: 4
   end
 
 end

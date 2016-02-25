@@ -3,6 +3,7 @@ class CreatePhotos < ActiveRecord::Migration
     create_table :photos do |t|
       t.string :title
       t.string :image_uid
+      t.integer :image_size
 
       t.timestamps null: false
     end
